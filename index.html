@@ -1,182 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SHARP NC</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SHARP NC</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
-    <style>
+  <style>
+    body {
+      margin: 0;
+      background: #f2e7d3;
+      color: #20201d;
+      font-family: 'Libre Baskerville', serif;
+      line-height: 1.8;
+    }
 
-        body {
-            margin: 0;
-            background-color: #f4efe4;
-            color: #2d2a26;
-            font-family: 'Libre Baskerville', serif;
-            line-height: 1.8;
-        }
+    .hero {
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(20, 18, 14, 0.45), rgba(20, 18, 14, 0.55)),
+        url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1800');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        .hero {
-            height: 420px;
-            background-image:
-                linear-gradient(rgba(20,20,20,0.45), rgba(20,20,20,0.45)),
-                url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1600');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    .hero-card {
+      background: rgba(242, 231, 211, 0.88);
+      border: 2px solid #b98d3d;
+      padding: 35px;
+      max-width: 720px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    }
 
-        .hero-content {
-            color: #f4efe4;
-        }
+    .logo {
+      max-width: 430px;
+      width: 90%;
+      height: auto;
+      display: block;
+      margin: 0 auto 25px;
+    }
 
-        .hero h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 5em;
-            letter-spacing: 6px;
-            margin-bottom: 10px;
-        }
+    .tagline {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #173126;
+      font-size: 0.95rem;
+    }
 
-        .hero p {
-            font-size: 1.2em;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 65px 28px;
+    }
 
-        .container {
-            max-width: 950px;
-            margin: auto;
-            padding: 60px 30px;
-        }
+    h2 {
+      font-family: 'Cinzel', serif;
+      color: #173126;
+      border-bottom: 1px solid #b98d3d;
+      padding-bottom: 12px;
+      margin-top: 45px;
+      letter-spacing: 1px;
+    }
 
-        h2 {
-            font-family: 'Cinzel', serif;
-            color: #304030;
-            margin-top: 50px;
-            border-bottom: 1px solid #c7bfae;
-            padding-bottom: 10px;
-        }
+    .intro {
+      font-size: 1.12rem;
+    }
 
-        p {
-            font-size: 1.05em;
-        }
+    .quote {
+      margin: 45px 0;
+      padding: 28px;
+      background: #eadcc3;
+      border-left: 5px solid #b98d3d;
+      font-style: italic;
+    }
 
-        .quote {
-            margin: 50px 0;
-            padding: 25px;
-            border-left: 4px solid #8a6a3f;
-            background-color: #efe7d8;
-            font-style: italic;
-        }
+    .seal-wrap {
+      text-align: center;
+      margin: 45px 0;
+    }
 
-        .contact-box {
-            margin-top: 40px;
-            padding: 25px;
-            background-color: #ebe3d2;
-            border: 1px solid #d1c5af;
-        }
+    .seal {
+      width: 190px;
+      max-width: 70%;
+      height: auto;
+    }
 
-        a {
-            color: #304030;
-            text-decoration: none;
-        }
+    .focus-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
 
-        a:hover {
-            text-decoration: underline;
-        }
+    .focus-card {
+      background: #eadcc3;
+      border: 1px solid #c9b68d;
+      padding: 20px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background-color: #222;
-            color: #d6c9b3;
-            margin-top: 60px;
-            font-size: 0.9em;
-            letter-spacing: 1px;
-        }
+    .focus-card strong {
+      color: #173126;
+      font-family: 'Cinzel', serif;
+    }
 
-    </style>
+    .skyline {
+      width: 100%;
+      display: block;
+      margin: 45px auto 0;
+    }
+
+    .contact-box {
+      background: #eadcc3;
+      border: 1px solid #c9b68d;
+      padding: 25px;
+      margin-top: 25px;
+    }
+
+    a {
+      color: #173126;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background: #10251c;
+      color: #e8d8b8;
+      text-align: center;
+      padding: 25px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+    }
+  </style>
 </head>
 
 <body>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>SHARP</h1>
-            <p>Saving Historic Areas for Revitalization and Prosperity</p>
-        </div>
-    </section>
+  <section class="hero">
+    <div class="hero-card">
+      <img src="sharp_top_right_logo.png" alt="SHARP North Carolina logo" class="logo">
+      <div class="tagline">Preserving Architecture · Strengthening Communities · Honoring Heritage</div>
+    </div>
+  </section>
 
-    <div class="container">
+  <main class="container">
 
-        <p>
-            SHARP is a North Carolina nonprofit organization dedicated to historic preservation,
-            adaptive reuse, and community revitalization throughout underserved and economically
-            distressed communities.
-        </p>
+    <p class="intro">
+      SHARP is a North Carolina nonprofit organization dedicated to historic preservation,
+      adaptive reuse, and community revitalization throughout underserved and economically
+      distressed communities.
+    </p>
 
-        <p>
-            Our mission is to preserve architectural heritage, encourage sustainable rehabilitation,
-            support local economic growth, and restore vitality to historic downtowns and commercial corridors
-            across North Carolina.
-        </p>
+    <p>
+      Our mission is to preserve architectural heritage, encourage sustainable rehabilitation,
+      support local economic growth, and restore vitality to historic downtowns and commercial
+      corridors across North Carolina.
+    </p>
 
-        <div class="quote">
-            “Historic preservation is not nostalgia. It is an investment in identity,
-            continuity, craftsmanship, and the future of community.”
-        </div>
-
-        <h2>Current Status</h2>
-
-        <p>
-            SHARP is currently organizing operations, developing preservation initiatives,
-            and pursuing federal 501(c)(3) tax-exempt status.
-        </p>
-
-        <h2>Focus Areas</h2>
-
-        <p>
-            SHARP is particularly interested in:
-        </p>
-
-        <ul>
-            <li>Historic commercial districts</li>
-            <li>Art Deco and early twentieth-century architecture</li>
-            <li>Adaptive reuse projects</li>
-            <li>Vacant downtown revitalization</li>
-            <li>Community-centered preservation</li>
-            <li>Sustainable restoration practices</li>
-        </ul>
-
-        <h2>Contact</h2>
-
-        <div class="contact-box">
-
-            <p>
-                <strong>SHARP NC</strong><br>
-                PO Box 567<br>
-                Kitty Hawk, NC 27949
-            </p>
-
-            <p>
-                Email:
-                <a href="mailto:info@sharpnc.org">
-                    info@sharpnc.org
-                </a>
-            </p>
-
-        </div>
-
+    <div class="quote">
+      “Historic preservation is not nostalgia. It is an investment in identity,
+      continuity, craftsmanship, and the future of community.”
     </div>
 
-    <footer>
-        © 2026 SHARP NC · North Carolina Historic Preservation Initiative
-    </footer>
+    <div class="seal-wrap">
+      <img src="sharp_seal_lower_left_crop.png" alt="SHARP official seal concept" class="seal">
+    </div>
+
+    <h2>Current Status</h2>
+
+    <p>
+      SHARP is currently organizing operations, developing preservation initiatives,
+      and pursuing federal 501(c)(3) tax-exempt status.
+    </p>
+
+    <h2>Focus Areas</h2>
+
+    <div class="focus-grid">
+      <div class="focus-card"><strong>Historic Downtowns</strong><br>Revitalizing traditional commercial districts and Main Street corridors.</div>
+      <div class="focus-card"><strong>Art Deco Architecture</strong><br>Preserving early twentieth-century buildings, theaters, storefronts, and civic landmarks.</div>
+      <div class="focus-card"><strong>Adaptive Reuse</strong><br>Helping historic structures return to productive community use.</div>
+      <div class="focus-card"><strong>Sustainable Restoration</strong><br>Encouraging salvage, reuse, and responsible rehabilitation practices.</div>
+    </div>
+
+    <img src="sharp_skyline_clean.png" alt="Historic North Carolina downtown skyline motif" class="skyline">
+
+    <h2>Contact</h2>
+
+    <div class="contact-box">
+      <p>
+        <strong>SHARP NC</strong><br>
+        PO Box 567<br>
+        Kitty Hawk, NC 27949
+      </p>
+
+      <p>
+        Email:
+        <a href="mailto:info@sharpnc.org">info@sharpnc.org</a>
+      </p>
+    </div>
+
+  </main>
+
+  <footer>
+    © 2026 SHARP NC · Saving Historic Areas for Revitalization and Prosperity
+  </footer>
 
 </body>
 </html>
