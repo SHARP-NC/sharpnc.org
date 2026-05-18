@@ -4,124 +4,87 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SHARP NC</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
-
   <style>
     body {
       margin: 0;
       background: #f2e7d3;
-      color: #20201d;
+      color: #161612;
       font-family: 'Libre Baskerville', serif;
-      line-height: 1.8;
+      line-height: 1.75;
     }
 
-    .hero {
-      min-height: 620px;
-      background:
-        linear-gradient(rgba(20, 18, 14, 0.45), rgba(20, 18, 14, 0.55)),
-        url('https://images.unsplash.com/photo-1518005020951-eccb494ad742?q=80&w=1800');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 40px 20px;
-    }
-
-    .hero-card {
-      background: rgba(242, 231, 211, 0.88);
-      border: 2px solid #b98d3d;
-      padding: 35px;
-      max-width: 720px;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.35);
-    }
-
-    .logo {
-      max-width: 430px;
-      width: 90%;
-      height: auto;
+    .hero-image {
+      width: 100%;
       display: block;
-      margin: 0 auto 25px;
-    }
-
-    .tagline {
-      font-family: 'Cinzel', serif;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #173126;
-      font-size: 0.95rem;
+      border-bottom: 2px solid #b98d3d;
     }
 
     .container {
-      max-width: 1000px;
+      max-width: 1060px;
       margin: auto;
-      padding: 65px 28px;
+      padding: 42px 28px 0;
     }
 
     h2 {
       font-family: 'Cinzel', serif;
       color: #173126;
       border-bottom: 1px solid #b98d3d;
-      padding-bottom: 12px;
-      margin-top: 45px;
+      padding-bottom: 10px;
+      margin: 32px 0 20px;
       letter-spacing: 1px;
+      font-size: 1.65rem;
+    }
+
+    p {
+      font-size: 1.02rem;
     }
 
     .intro {
-      font-size: 1.12rem;
-    }
-
-    .quote {
-      margin: 45px 0;
-      padding: 28px;
-      background: #eadcc3;
-      border-left: 5px solid #b98d3d;
-      font-style: italic;
-    }
-
-    .seal-wrap {
-      text-align: center;
-      margin: 45px 0;
-    }
-
-    .seal {
-      width: 190px;
-      max-width: 70%;
-      height: auto;
+      font-size: 1.08rem;
     }
 
     .focus-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-      margin-top: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 22px;
     }
 
     .focus-card {
       background: #eadcc3;
       border: 1px solid #c9b68d;
-      padding: 20px;
+      padding: 22px;
+      text-align: center;
+      min-height: 145px;
     }
 
     .focus-card strong {
+      display: block;
       color: #173126;
+      font-family: 'Cinzel', serif;
+      margin-bottom: 10px;
+    }
+
+    .deco-mark {
+      color: #b98d3d;
+      margin-top: 14px;
+      letter-spacing: 12px;
       font-family: 'Cinzel', serif;
     }
 
     .skyline {
       width: 100%;
       display: block;
-      margin: 45px auto 0;
+      margin: 38px auto 0;
     }
 
     .contact-box {
       background: #eadcc3;
       border: 1px solid #c9b68d;
-      padding: 25px;
-      margin-top: 25px;
+      padding: 24px;
+      margin-top: 20px;
     }
 
     a {
@@ -138,21 +101,26 @@
       background: #10251c;
       color: #e8d8b8;
       text-align: center;
-      padding: 25px;
-      font-size: 0.85rem;
+      padding: 22px;
+      font-size: 0.86rem;
       letter-spacing: 1px;
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        padding: 30px 18px 0;
+      }
+
+      h2 {
+        font-size: 1.35rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero">
-    <div class="hero-card">
-      <img src="sharp_top_right_logo.png" alt="SHARP North Carolina logo" class="logo">
-      <div class="tagline">Preserving Architecture · Strengthening Communities · Honoring Heritage</div>
-    </div>
-  </section>
+  <img src="sharp_phase1_hero_banner.png" alt="SHARP North Carolina historic preservation banner" class="hero-image">
 
   <main class="container">
 
@@ -168,15 +136,6 @@
       corridors across North Carolina.
     </p>
 
-    <div class="quote">
-      “Historic preservation is not nostalgia. It is an investment in identity,
-      continuity, craftsmanship, and the future of community.”
-    </div>
-
-    <div class="seal-wrap">
-      <img src="sharp_seal_lower_left_crop.png" alt="SHARP official seal concept" class="seal">
-    </div>
-
     <h2>Current Status</h2>
 
     <p>
@@ -187,13 +146,32 @@
     <h2>Focus Areas</h2>
 
     <div class="focus-grid">
-      <div class="focus-card"><strong>Historic Downtowns</strong><br>Revitalizing traditional commercial districts and Main Street corridors.</div>
-      <div class="focus-card"><strong>Art Deco Architecture</strong><br>Preserving early twentieth-century buildings, theaters, storefronts, and civic landmarks.</div>
-      <div class="focus-card"><strong>Adaptive Reuse</strong><br>Helping historic structures return to productive community use.</div>
-      <div class="focus-card"><strong>Sustainable Restoration</strong><br>Encouraging salvage, reuse, and responsible rehabilitation practices.</div>
+      <div class="focus-card">
+        <strong>Historic Downtowns</strong>
+        Revitalizing traditional commercial districts and Main Street corridors.
+        <div class="deco-mark">◇</div>
+      </div>
+
+      <div class="focus-card">
+        <strong>Art Deco Architecture</strong>
+        Preserving early twentieth-century buildings, theaters, storefronts, and civic landmarks.
+        <div class="deco-mark">◇</div>
+      </div>
+
+      <div class="focus-card">
+        <strong>Adaptive Reuse</strong>
+        Helping historic structures return to productive community use.
+        <div class="deco-mark">◇</div>
+      </div>
+
+      <div class="focus-card">
+        <strong>Sustainable Restoration</strong>
+        Encouraging salvage, reuse, and responsible rehabilitation practices.
+        <div class="deco-mark">◇</div>
+      </div>
     </div>
 
-    <img src="sharp_skyline_clean.png" alt="Historic North Carolina downtown skyline motif" class="skyline">
+    <img src="sharp_phase1_skyline_clean.png" alt="Historic North Carolina downtown skyline motif" class="skyline">
 
     <h2>Contact</h2>
 
